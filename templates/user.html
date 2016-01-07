@@ -1,0 +1,95 @@
+<!--div class="card top-space">
+		<div class="p+">
+			<b class ="fs-headline display-block tc-red-900">
+				{{user.id}}
+				</b>
+				<div class ="paragraph fs-body-1 mt+">
+					{{user.email}}
+				</div>
+				<div class ="paragraph fs-body-1 mt+">
+					{{user.username}}
+				</div>
+		</div>
+
+</div-->
+
+<div class="card top-space">
+<div flex-container="row" >
+    	
+    	
+   		
+    <div flex-item>
+    	<div class="p+">
+    		<h3>Listado de Clientes</h3>
+
+
+        <lx-select ng-model="libro.id" placeholder="Seleccione Libro" choices="libros" floating-label>
+            <lx-select-selected>
+                {{ $selected.id }}
+            </lx-select-selected>
+
+            <lx-select-choices>
+                {{ $choice.id }}
+            </lx-select-choices>
+        </lx-select>
+
+
+
+        <lx-select ng-model="cliente" placeholder="Seleccione cliente" choices="cliente" floating-label>
+            <lx-select-selected>
+                {{ $selected.name }}
+            </lx-select-selected>
+
+            <lx-select-choices>
+                {{ $choice.name }}
+            </lx-select-choices>
+        </lx-select>
+
+
+
+    </div>
+</div>
+</div>
+</div>
+
+<div class="card top-space">
+<div class="data-table-container">
+  
+
+    <table class="data-table">
+        <thead>
+            <tr class="data-table__selectable-row">
+                <th></th>
+                <th><b>#</b></th>
+                <th><b>Co. Le</b></th>
+                <th><b>Nro. Med</b></th>
+                <!--th class="data-table__sortable-cell data-table__sortable-cell--desc">Carbs (g)</th-->
+                <th><b>Marca Med</b></th>
+                <th>
+                    <i class="mdi mdi-comment-text"></i>
+                    <span>Detalle</span>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="data-table__selectable-row data-table__selectable-row--is-selected" ng-repeat="libro in libros">
+                <td></td>
+                <td>{{$index + 1}}</td>
+                <td>{{libro.id}}</td>
+                <td>{{libro.co_le}}</td>
+                <td>{{libro.marca}}</td>
+
+                <td><a href="#"><i class="icon icon--l icon--blue icon--flat mdi mdi-send"></i></a></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+<div>
+<center>
+	<button class="btn btn--m btn--blue btn--raised mt lx-ripple">Refrescar</button>
+	<button class="btn btn--m btn--blue btn--raised mt lx-ripple">Sincronizar</button>
+</center>
+ </div>

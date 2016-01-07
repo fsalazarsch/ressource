@@ -1,0 +1,43 @@
+<form ng-submit="verificar()">
+	<div class="card top-space">
+		<div class="p+">
+			<h1>{{title}}</h1>
+			<div flex-container ="row">
+				<div flex-item>
+					<lx-text-field label="Folio">
+						<input type="text" ng-model="user.id">
+						</lx-text-field>
+					</div>
+				</div>
+
+			<div flex-container ="row">
+				<div flex-item>
+					<lx-text-field label="Usuario">
+						<input type="text" ng-model="user.username">
+						</lx-text-field>
+					</div>
+				</div>
+
+			<div flex-container ="row">
+				<div flex-item>
+					<lx-text-field label="Contraseña">
+						<input type="text" ng-model="user.email">
+						</lx-text-field>
+					</div>
+				</div>
+
+
+			
+			<div class="card__actions">
+				
+				<button type="submit" class="btn btn--blue btn--l btn--raised">
+					Ingresar
+					</button>
+					<button type="" class="btn btn--red btn--l btn--raised">
+					Salir
+					</button>
+				</div>
+			
+		</div>
+	</div>
+</form>
